@@ -1,66 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Projet réalisé pour le compte d'une auto-entreprise, dans le secteur de l'animation :
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+* Utilisation du framework PHP LARAVEL, couplé à la librairie Inertia.js,
+* Views en vue.js
 
-## About Laravel
+* BDD MariaDB
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* Site vitriné constitué : 
+* d'une page d'acceuil présentant l'équipe de l'entreprise
+* d'une page affichant le programme du mois à venir 
+* d'une galerie d'albums photos
+* d'une page contact
+* d'une page présentant des quizzs (vrai ou faux, qui est-ce, QCM), pour donner une idée des activitées présentées par l'entreprise
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* D'un panel admin (crée en adaptant le package Breeze) permettant d'alimenter les différentes pages sus-citées
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* SPA testée via le framework Cypress.js
 
-## Learning Laravel
+---------------------------------------------------
+Installation coté serveur :
+Installer Laravel : composer global require laravel/installer
+Installer inertia : composer require inertiajs/inertia-laravel
+Installer le middleware : php artisan inertia:middleware
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Installation coté client : 
+Installation vue.js : npm install vue@next
+Installation des dépendances : npm install @inertiajs/inertia @inertiajs/inertia-vue3
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Lancer le projet
+- configurer le fichier .env
+- "npm run dev" ET "php artisan serve"
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+* Screenshots
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* Page d'acceuil :
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/2b400122-5f84-4326-8ee3-ce4d3484f4f5)
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+* Page  programme :
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/cde41f47-1457-4f65-a4de-e04f382bd1f8)
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Page galerie :
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/6311a7b2-a6d5-499e-af9f-de74e9151a89)
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Page contact :
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/e7bb9569-a1be-4c71-9f15-55a6e5bec1c4)
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/3a9b7d90-ef29-4fd3-a839-aef498c7d52e)
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+* Page quizz :
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/c2c75323-b6dc-4e9d-93f8-2718744417fc)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+* Exemple du panel admin :
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/1008dd44-e401-4043-9d72-d65ca4eda1ae)
+
+Exemple du site en version mobile :
+
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/d3e28226-fe04-45e5-b606-98d581b24f7b)
+![image](https://github.com/ldlms/monkeyCompagnie/assets/123155110/3e92a58c-b6b1-436a-b614-523d0dbd5ac4)
+
+
+
+
